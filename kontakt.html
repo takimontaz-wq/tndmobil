@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kontakt | TND Mobil Gdynia</title>
+<meta name="description" content="Kontakt z mobilnym serwisem opon.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="canonical" href="https://tndmobil.pl/kontakt.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoRepair", "name": "TND Mobil — mobilny serwis opon", "telephone": "+48888582459", "url": "https://tndmobil.pl", "areaServed": ["Gdynia", "Sopot", "Gdańsk", "Rumia", "Reda", "Wejherowo", "Szemud", "Kielno", "Koleczkowo", "Bojano", "Chwaszczyno", "Gmina Puck"], "openingHours": "Mo-Su 00:00-23:59", "email": "tndtireswap@interia.pl", "address": {"@type": "PostalAddress", "streetAddress": "ul. Adm. J. Unruga 37F/5", "postalCode": "81-181", "addressLocality": "Gdynia", "addressCountry": "PL"}, "priceRange": "$$"}</script>
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<section class="hero hero-sub"><div class="wrap"><div class="hero-copy">
+  <p class="crumbs"><a href="index.html">Home</a> / Kontakt</p>
+  <h1>Kontakt</h1>
+  <p class="lead">Masz pytanie albo potrzebujesz wymiany opon? Zadzwoń, napisz lub wypełnij formularz.</p>
+
+</div></div></section>
+<section class="section"><div class="wrap split" style="align-items:start">
+  <div class="stack">
+    <span class="eyebrow">Dane kontaktowe</span>
+    <div class="big-contact">
+      <div class="item"><small>Telefon</small><a data-href="tel" href="#" data-t="telefon">tel.</a></div>
+      <div class="item"><small>E-mail</small><a data-href="mail" href="#" data-t="email">e-mail</a></div>
+      <div class="item"><small>Godziny</small><span class="val" data-t="godziny" style="font-size:1.1rem">godziny</span></div>
+      <div class="item"><small>Firma</small><span class="note"><span data-t="firma"></span><br><span data-t="adres"></span><br>NIP: <span data-t="nip"></span></span></div>
+    </div>
+  </div>
+  <form class="form" data-wa="Zapytanie ze strony">
+    <h3>Napisz do nas</h3>
+    <div class="row"><label for="k-imie">Imię<input id="k-imie" name="imie" required></label><label for="k-tel">Telefon<input id="k-tel" name="tel" type="tel" required></label></div>
+    <label for="k-email">E-mail<input id="k-email" name="email" type="email"></label>
+    <div class="row">
+      <label for="k-usluga">Usługa<select id="k-usluga" name="usluga"><option>Wymiana opon</option><option>Wymiana kół</option><option>Naprawa przebitej opony</option><option>Wyważanie kół</option><option>Flota firmowa</option><option>Inne</option></select></label>
+      <label for="k-rozmiar">Rozmiar opon (opcjonalnie)<input id="k-rozmiar" name="rozmiar" placeholder="np. 205/55 R16"></label>
+    </div>
+    <label for="k-adres">Adres / dzielnica<input id="k-adres" name="adres"></label>
+    <label for="k-msg">Wiadomość<textarea id="k-msg" name="msg" rows="4"></textarea></label>
+    <label class="check" for="k-zgoda"><input id="k-zgoda" type="checkbox" required> Zgadzam się na przetwarzanie danych w celu odpowiedzi na wiadomość zgodnie z <a href="polityka-prywatnosci.html">polityką prywatności</a>.</label>
+    <button class="btn btn-hot" type="submit"><span data-ico="wa"></span>Wyślij na WhatsApp</button>
+    <p class="note">Otworzy się WhatsApp z gotową wiadomością — wystarczy nacisnąć „Wyślij”.</p>
+  </form>
+</div></section>
+<section class="section section-white"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">Obszar</span><h2>Gdzie dojeżdżamy</h2></div>
+  <div data-areas></div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="cta-band">
+    <div class="stack"><h2>Kilka aut pod jednym adresem?</h2><p>Kilka aut pod jednym adresem to jeden dojazd i możliwy rabat. Zadzwoń albo napisz — przygotujemy wycenę.</p></div>
+    <div class="btn-row"><a class="btn btn-dark-call" data-href="tel" href="#"><span data-ico="tel"></span>Umów wymianę opon</a>
+    <a class="btn btn-ghost btn-wa" data-href="wa" href="#" style="color:var(--steel-ink);border-color:rgba(0,0,0,.35)"><span data-ico="wa"></span>WhatsApp</a></div>
+  </div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/config.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

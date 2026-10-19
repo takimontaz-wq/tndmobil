@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tndmobil.pl/sitemap.xml
