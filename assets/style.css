@@ -658,3 +658,8 @@ table.price th + th { padding-left: 1rem; }
 /* === Tabele w artykułach Wiedzy — opis wyrównany do lewej === */
 .prose table.price th:last-child, .prose table.price td:last-child { text-align: left; font-weight: 400; }
 .prose table.price td:first-child { white-space: nowrap; }
+
+/* === Listy bez ikonek „ptaszków” — zwykłe, wyśrodkowane linie === */
+.ticks { text-align: center; }
+.ticks li { padding-left: 0; }
+.ticks li::before, .ticks li::after { content: none !important; display: none !important; }
