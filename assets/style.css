@@ -663,3 +663,8 @@ table.price th + th { padding-left: 1rem; }
 .ticks { text-align: center; }
 .ticks li { padding-left: 0; }
 .ticks li::before, .ticks li::after { content: none !important; display: none !important; }
+
+/* === Regulamin i polityka — długi tekst prawny czytelniej wyrównany do lewej === */
+.prose.legal { justify-items: stretch; text-align: left; }
+.prose.legal h2 { text-align: left; }
+.prose.legal ol ul { margin-top: .4rem; }
