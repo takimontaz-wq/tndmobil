@@ -668,3 +668,6 @@ table.price th + th { padding-left: 1rem; }
 .prose.legal { justify-items: stretch; text-align: left; }
 .prose.legal h2 { text-align: left; }
 .prose.legal ol ul { margin-top: .4rem; }
+
+/* === Zdjęcie panoramiczne (np. bus na stronie Mobilna wulkanizacja) — bez przycinania do 4:3 === */
+.photo-wide img { aspect-ratio: 16 / 9; }
