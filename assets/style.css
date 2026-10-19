@@ -651,3 +651,6 @@ table.price td:last-child { font-family: var(--f-display); color: var(--dark); }
 table.price th:not(:first-child), table.price td:not(:first-child) { text-align: right; }
 table.price td:not(:first-child) { font: 700 1rem/1 var(--f-display); color: var(--dark); white-space: nowrap; }
 table.price th + th { padding-left: 1rem; }
+
+/* === IKONY MDI (Material Design Icons) — pełne kształty, trochę większe === */
+.card .ico svg { width: 28px; height: 28px; fill: currentColor; }

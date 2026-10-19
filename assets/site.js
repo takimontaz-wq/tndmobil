@@ -76,7 +76,7 @@
     var areas = (C.obszar || []).map(function (a) {
       return '<li><a href="obszar-dzialania.html#' + slug(a.miasto) + '">' + esc(a.miasto) + "</a></li>";
     }).join("");
-    var wiedza = (C.wiedza || []).map(function (w) { return '<li><a href="' + esc(w.url) + '">' + esc(w.tytul) + "</a></li>"; }).join("");
+    var wiedza = (C.wiedza || []).map(function (w) { return '<li><a href="' + esc(w.url || "wiedza.html") + '">' + esc(w.tytul) + "</a></li>"; }).join("");
     var socials = (C.facebook ? '<a href="' + esc(C.facebook) + '" aria-label="Facebook">fb</a>' : "") + (C.instagram ? '<a href="' + esc(C.instagram) + '" aria-label="Instagram">ig</a>' : "");
     return (
       '<footer class="footer"><div class="wrap"><div class="cols">' +
@@ -166,7 +166,8 @@
   /* Lista artykułów */
   document.querySelectorAll("[data-wiedza]").forEach(function (el) {
     el.innerHTML = (C.wiedza || []).map(function (w) {
-      return '<a class="card" href="' + esc(w.url) + '"><div class="ph ph-43"><div><b>ZDJĘCIE ARTYKUŁU</b>1200×900</div></div><h3>' + esc(w.tytul) + "</h3><p>" + esc(w.zajawka) + '</p><span class="more">Czytaj →</span></a>';
+      var tag = w.url ? 'a class="card" href="' + esc(w.url) + '"' : 'div class="card"';
+      return '<' + tag + '>' + (w.zdjecie ? '<picture class="photo"><source srcset="img/' + esc(w.zdjecie) + '.webp" type="image/webp"><img src="img/' + esc(w.zdjecie) + '.jpg" alt="' + esc(w.alt || w.tytul) + '" width="1200" height="900" loading="lazy"></picture>' : '<div class="ph ph-43"><div><b>ZDJĘCIE ARTYKUŁU</b>1200×900</div></div>') + '<h3>' + esc(w.tytul) + "</h3><p>" + esc(w.zajawka) + '</p><span class="more">' + (w.url ? "Czytaj →" : "Wkrótce") + '</span>' + (w.url ? "</a>" : "</div>");
     }).join("");
   });
 
