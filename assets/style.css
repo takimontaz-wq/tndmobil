@@ -654,3 +654,7 @@ table.price th + th { padding-left: 1rem; }
 
 /* === IKONY MDI (Material Design Icons) — pełne kształty, trochę większe === */
 .card .ico svg { width: 28px; height: 28px; fill: currentColor; }
+
+/* === Tabele w artykułach Wiedzy — opis wyrównany do lewej === */
+.prose table.price th:last-child, .prose table.price td:last-child { text-align: left; font-weight: 400; }
+.prose table.price td:first-child { white-space: nowrap; }

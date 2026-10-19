@@ -61,10 +61,10 @@ window.TND = {
      zdjecie: nazwa pliku z folderu img/ bez końcówki (potrzebne .webp i .jpg 1200×900)
      url: adres gotowego artykułu — bez url kafelek pokazuje „Wkrótce” */
   wiedza: [
-    { tytul: "Kiedy zmienić opony letnie na zimowe?", url: "wiedza-artykul.html", zdjecie: "wiedza-zimowe", alt: "Wymiana koła przez serwis TND Mobil", zajawka: "Zasada 7°C, głębokość bieżnika i co mówią przepisy." },
-    { tytul: "Kiedy wrócić na opony letnie?", zdjecie: "wiedza-letnie", alt: "Bus serwisowy TND Mobil", zajawka: "Jak nie przegapić momentu i nie przepłacić w sezonie." },
-    { tytul: "Przebita opona — co zrobić krok po kroku", zdjecie: "wiedza-przebita", alt: "Koło na montażownicy w busie TND Mobil", zajawka: "Kiedy da się naprawić, a kiedy trzeba wymienić." },
-    { tytul: "Jak odczytać rozmiar opony?", zdjecie: "wiedza-rozmiar", alt: "Opona z oznaczeniem rozmiaru na boku", zajawka: "205/55 R16 91V — co oznacza każdy znak." }
+    { tytul: "Kiedy zmienić opony letnie na zimowe?", url: "opony-zimowe-kiedy-zmienic.html", zdjecie: "wiedza-zimowe", alt: "Wymiana koła przez serwis TND Mobil", zajawka: "Zasada 7°C, głębokość bieżnika i wiek opony." },
+    { tytul: "Kiedy wrócić na opony letnie?", url: "opony-letnie-kiedy-zmienic.html", zdjecie: "wiedza-letnie", alt: "Bus serwisowy TND Mobil", zajawka: "Jak nie przegapić momentu i nie przepłacić w sezonie." },
+    { tytul: "Przebita opona — co zrobić krok po kroku", url: "przebita-opona-co-zrobic.html", zdjecie: "wiedza-przebita", alt: "Koło na montażownicy w busie TND Mobil", zajawka: "Kiedy da się naprawić, a kiedy trzeba wymienić." },
+    { tytul: "Jak odczytać rozmiar opony?", url: "jak-odczytac-rozmiar-opony.html", zdjecie: "wiedza-rozmiar", alt: "Opona z oznaczeniem rozmiaru na boku", zajawka: "205/55 R16 91V — co oznacza każdy znak." }
   ],
 
   /* --- CENNIK (ceny od klienta, 12.10.2026) ----------------------------- */
