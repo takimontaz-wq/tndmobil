@@ -19,7 +19,7 @@ window.TND = {
   /* --- Kontakt ------------------------------------------------------------ */
   telefon: "888 582 459",                        // numer firmowy / awarie (pokazywany wszędzie)
   telefonIntl: "+48888582459",
-  telefon2: "",                                  // DO POTWIERDZENIA: czy pokazać prywatny 606 103 692? Wpisz "606 103 692", by pokazać
+  telefon2: "",                                  // drugi numer — nie pokazujemy
   telefon2Opis: "Tel. 2",
   email: "tndtireswap@interia.pl",
   whatsapp: "48888582459",                       // WhatsApp na numerze firmowym
@@ -52,7 +52,7 @@ window.TND = {
 
   /* --- Liczby, które pojawiają się w tekstach --------------------------- */
   cenaOd: "100 zł",                              // cena "od" w bloku Sezonowa wymiana opon (wymiana kół od 100 zł)
-  dojazdCena: "zależny od rejonu",              // DO POTWIERDZENIA: cena dojazdu w Gdyni i dalej
+  dojazdCena: "100 zł",                          // cena dojazdu (raz na adres) — zmiana tutaj podmienia ją wszędzie
   felgi: "12–21\"",
   czasWymiany: "30–45 minut",
   platnosci: ["Gotówka", "Karta", "BLIK", "Przelew"],
