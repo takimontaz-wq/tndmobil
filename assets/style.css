@@ -690,3 +690,8 @@ table.price th + th { padding-left: 1rem; }
 @media (prefers-reduced-motion: reduce) { .gal-slide { transition: none; } }
 
 .gal-slide::after { content: ""; position: absolute; inset: 0; background: #000; opacity: var(--dim, 0); transition: opacity .7s ease; pointer-events: none; }
+
+/* === Czarny przycisk (np. „Zobacz cennik”) — biały tekst, żeby nie zlewał się z tłem === */
+a.btn.btn-steel, .stack a.btn.btn-steel, .prose a.btn.btn-steel { color: #fff; }
+a.btn.btn-steel:hover { background: var(--hot); border-color: var(--hot); color: var(--hot-ink); }
+.hero a.btn.btn-steel { color: var(--dark); }
