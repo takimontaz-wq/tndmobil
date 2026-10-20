@@ -671,3 +671,22 @@ table.price th + th { padding-left: 1rem; }
 
 /* === Zdjęcie panoramiczne (np. bus na stronie Mobilna wulkanizacja) — bez przycinania do 4:3 === */
 .photo-wide img { aspect-ratio: 16 / 9; }
+
+/* === GALERIA — karuzela: środkowe zdjęcie duże, boczne mniejsze i przyciemnione, zapętlona === */
+.section-gal { overflow: hidden; }
+.gal { position: relative; height: calc(var(--gal-w) * .75 + 8px); --gal-w: min(620px, 74vw); margin-top: 1.5rem; touch-action: pan-y; user-select: none; }
+.gal-track { position: absolute; inset: 0; }
+.gal-slide { position: absolute; left: 50%; top: 0; width: var(--gal-w); margin: 0 0 0 calc(var(--gal-w) / -2);
+  transition: transform .7s cubic-bezier(.22,.7,.2,1), opacity .7s ease; cursor: pointer; will-change: transform; }
+.gal-slide img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: 0 18px 40px rgba(0,0,0,.25); pointer-events: none; }
+.gal-slide.is-active { cursor: default; }
+.gal-slide.is-active img { box-shadow: 0 24px 60px rgba(0,0,0,.35); outline: 4px solid var(--hot); outline-offset: -4px; }
+.gal-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 50; width: 48px; height: 48px; border: 0; background: var(--hot); color: var(--hot-ink);
+  font: 700 2rem/1 var(--f-display, sans-serif); cursor: pointer; display: grid; place-items: center; }
+.gal-prev { left: max(12px, calc(50% - var(--gal-w) / 2 - 24px)); }
+.gal-next { right: max(12px, calc(50% - var(--gal-w) / 2 - 24px)); }
+.gal-nav:hover { filter: brightness(1.1); }
+@media (max-width: 640px) { .gal { --gal-w: 78vw; } .gal-nav { width: 40px; height: 40px; font-size: 1.6rem; } }
+@media (prefers-reduced-motion: reduce) { .gal-slide { transition: none; } }
+
+.gal-slide::after { content: ""; position: absolute; inset: 0; background: #000; opacity: var(--dim, 0); transition: opacity .7s ease; pointer-events: none; }

@@ -171,6 +171,47 @@
     }).join("");
   });
 
+
+  /* ---------- Galeria: zapętlona karuzela (środek duży, boki mniejsze i ciemniejsze) ---------- */
+  document.querySelectorAll("[data-gal]").forEach(function (gal) {
+    var slides = [].slice.call(gal.querySelectorAll(".gal-slide"));
+    var n = slides.length, cur = 0, timer = null;
+    if (!n) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function render() {
+      var w = slides[0].offsetWidth;
+      slides.forEach(function (s, i) {
+        var d = ((i - cur) % n + n) % n; if (d > n / 2) d -= n;      /* najkrótsza odległość po okręgu */
+        var a = Math.abs(d);
+        var scale = a === 0 ? 1 : a === 1 ? .72 : .55;
+        var x = d === 0 ? 0 : Math.sign(d) * (w * .5 + w * .72 * .5 * .82 + (a - 1) * w * .5);
+        s.style.transform = "translateX(" + x + "px) scale(" + scale + ")";
+        s.style.setProperty("--dim", a === 0 ? 0 : a === 1 ? .55 : .7);
+        s.style.opacity = a > 2 ? 0 : 1;
+        s.style.zIndex = 10 - a;
+        s.style.pointerEvents = a > 2 ? "none" : "";
+        s.classList.toggle("is-active", a === 0);
+        s.setAttribute("aria-hidden", a === 0 ? "false" : "true");
+      });
+    }
+    function go(k) { cur = ((k % n) + n) % n; render(); }
+    function start() { if (reduce) return; stop(); timer = setInterval(function () { go(cur + 1); }, 3500); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+    gal.querySelector(".gal-prev").addEventListener("click", function () { go(cur - 1); start(); });
+    gal.querySelector(".gal-next").addEventListener("click", function () { go(cur + 1); start(); });
+    slides.forEach(function (s, i) { s.addEventListener("click", function () { if (i !== cur) { go(i); start(); } }); });
+    gal.addEventListener("mouseenter", stop); gal.addEventListener("mouseleave", start);
+    var x0 = null;
+    gal.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; stop(); }, { passive: true });
+    gal.addEventListener("touchend", function (e) {
+      if (x0 !== null) { var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); }
+      x0 = null; start();
+    });
+    document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+    window.addEventListener("resize", render);
+    render(); start();
+  });
+
   /* ---------- Cennik z config.js ---------- */
   var pr = document.querySelector("[data-cennik]");
   if (pr && C.cennik) {
