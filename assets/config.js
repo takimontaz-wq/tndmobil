@@ -37,7 +37,7 @@ window.TND = {
   /* --- Linki zewnętrzne (zostaw "" by ukryć) ---------------------------- */
   facebook: "",                                  // DO UZUPEŁNIENIA po zmianie profilu na Facebooku
   instagram: "",
-  googleOpinieUrl: "",                           // po założeniu Profilu Firmy w Google
+  googleOpinieUrl: "https://g.page/r/CeNV8b5J-3VQEBM/review",  // link do wystawienia opinii w Google (Profil Firmy)
 
   /* --- Obszar działania ------------------------------------------------- */
   miastoGlowne: "Gdynia",

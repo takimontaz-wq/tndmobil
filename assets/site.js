@@ -85,7 +85,8 @@
           '<div class="f-contact stack" style="gap:.4rem"><a class="hot" href="' + tel(C.telefonIntl || C.telefon) + '">' + esc(C.telefon) + "</a>" +
           (hasWa ? '<a href="' + wa() + '" target="_blank" rel="noopener">WhatsApp →</a>' : "") +
           (C.telefon2 ? '<a href="' + tel(C.telefon2) + '">' + esc(C.telefon2) + "</a>" : "") +
-          '<a href="mailto:' + esc(C.email) + '">' + esc(C.email) + "</a></div>" +
+          '<a href="mailto:' + esc(C.email) + '">' + esc(C.email) + "</a>" +
+          (C.googleOpinieUrl ? '<a href="' + esc(C.googleOpinieUrl) + '" target="_blank" rel="noopener">★ Wystaw nam opinię w Google</a>' : "") + "</div>" +
           '<div class="socials">' + socials + "</div>" +
           "</div>" +
         '<div><h4>Menu</h4><ul>' +
@@ -120,7 +121,8 @@
     else if (k === "wa") { if (hasWa) { el.href = wa(); el.target = "_blank"; el.rel = "noopener"; } else el.hidden = true; }
     else if (k === "tel2") el.href = tel(C.telefon2 || C.telefon);
     else if (k === "mail") el.href = "mailto:" + C.email;
-    else if (C[k]) el.href = C[k];
+    else if (C[k]) { el.href = C[k]; if (/^https?:/.test(C[k])) { el.target = "_blank"; el.rel = "noopener"; } }
+    else if (k === "googleOpinieUrl") el.hidden = true;
   });
 
   /* Ikony w przyciskach: <span data-ico="tel"></span> */
